@@ -1,0 +1,138 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+// start header
+.header{
+    background-color: $accent;
+    &__inner{
+        min-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.menu__btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $accent;
+        top: 15px;
+        left: 14px;
+        box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
+    }
+}
+// end header
+// start head
+.head{
+    background-image: url(../images/slider-bg.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    min-height: 193px;
+}
+.top-slider{
+    background: rgba(33, 33, 33, 0.5);
+    &__item{
+        min-height: 193px;
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+    &__title{
+        @extend %roboto;
+        line-height: 28px;
+        font-size: 28px;
+        text-transform: uppercase;
+        padding: 36px 0 28px;
+        max-width: 243px;
+        margin: 0 auto;
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+       
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        .slick-active{
+            button{
+                background-color: transparent;
+                border: 1px solid  #476E4D ;
+            }
+        }
+        button{
+            font-size: 0;
+            background-color: $accent;
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 10px;
+           
+        }
+    }
+    &__text{
+        display: none;
+        @extend %roboto;
+    }
+    &__btn{
+        display: none;
+       
+    }
+    .slick-arrow{
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        right: 0;
+        z-index: 5;
+    }
+    .slick-prev{
+        background-color: $accent;
+        top: calc(50% - 56px);
+    }
+    .slick-next{
+        background-color: $bg;
+        bottom: calc(50% - 56px);
+    }
+}
+// end head
+// start call
+.call{
+    background-color: $accent;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+    &__inner{
+
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+    &__text{
+        @extend %dosis;
+        margin-bottom: 40px;
+    }
+    &__btn{
+        background-color: $bg;
+        padding: 16px 15px;
+        color: $accent;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+}
+// end call
+@import 'media';
